@@ -48,6 +48,53 @@
   opacity: 0.8;
 }
 
+/* Kana row layout */
+.kana-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.kana-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.kana-cell {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 80px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kana-cell:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.kana-japanese {
+  font-size: 42px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1;
+}
+
+.kana-romaji {
+  font-size: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+/* List layout for phrases and vocabulary */
 .browse-list {
   display: grid;
   gap: 15px;
@@ -112,6 +159,27 @@
 
   .category-tab .count {
     font-size: 14px;
+  }
+
+  .kana-rows {
+    gap: 15px;
+  }
+
+  .kana-row {
+    gap: 8px;
+  }
+
+  .kana-cell {
+    min-width: 65px;
+    padding: 16px 12px;
+  }
+
+  .kana-japanese {
+    font-size: 36px;
+  }
+
+  .kana-romaji {
+    font-size: 18px;
   }
 
   .browse-item {
