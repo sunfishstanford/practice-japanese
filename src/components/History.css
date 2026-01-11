@@ -1,0 +1,151 @@
+.history-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.history-container h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.no-history {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-history p {
+  font-size: 22px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.history-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #4a90e2;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #666;
+  font-weight: 500;
+}
+
+.history-list {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.history-list h3 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.history-item {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-date {
+  font-size: 18px;
+  color: #666;
+  flex: 1;
+}
+
+.history-score {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.score-fraction {
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.score-percentage {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 6px;
+  min-width: 70px;
+  text-align: center;
+}
+
+.score-percentage.excellent {
+  background-color: #4caf50;
+  color: white;
+}
+
+.score-percentage.good {
+  background-color: #ff9800;
+  color: white;
+}
+
+.score-percentage.needs-practice {
+  background-color: #f44336;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .history-container h2 {
+    font-size: 28px;
+  }
+
+  .history-list h3 {
+    font-size: 24px;
+  }
+
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .history-score {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .stat-value {
+    font-size: 32px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+  }
+}
