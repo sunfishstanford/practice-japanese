@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { allData } from '../data';
 import './Quiz.css';
 
@@ -10,6 +10,7 @@ function Quiz({ settings }) {
   const [score, setScore] = useState(0);
   const [incorrectQuestions, setIncorrectQuestions] = useState([]);
   const [sessionComplete, setSessionComplete] = useState(false);
+  const feedbackRef = useRef(null);
 
   const startNewSession = useCallback(() => {
     // Get previously incorrect questions from localStorage
@@ -36,6 +37,13 @@ function Quiz({ settings }) {
   useEffect(() => {
     startNewSession();
   }, [startNewSession]);
+
+  // Scroll to feedback when it becomes visible
+  useEffect(() => {
+    if (showFeedback && feedbackRef.current) {
+      feedbackRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, [showFeedback]);
 
   const generateQuestions = (count, emphasizeItems) => {
     const questions = [];
@@ -256,7 +264,7 @@ function Quiz({ settings }) {
       </div>
 
       {showFeedback && (
-        <div className={`feedback ${isCorrect ? 'correct' : 'incorrect'}`}>
+        <div ref={feedbackRef} className={`feedback ${isCorrect ? 'correct' : 'incorrect'}`}>
           <p className="feedback-text">
             {isCorrect ? 'Correct!' : 'Incorrect!'}
           </p>
