@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/practice-japanese/static/css/main.81a1bd1b.css",
+    "main.js": "/practice-japanese/static/js/main.3b40bf92.js",
+    "service-worker.js": "/practice-japanese/service-worker.js",
+    "index.html": "/practice-japanese/index.html",
+    "main.81a1bd1b.css.map": "/practice-japanese/static/css/main.81a1bd1b.css.map",
+    "main.3b40bf92.js.map": "/practice-japanese/static/js/main.3b40bf92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81a1bd1b.css",
+    "static/js/main.3b40bf92.js"
+  ]
+}
