@@ -6,7 +6,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/sunfishstanford/practice-japanese/issues"
   },
-  "homepage": ".",
+  "homepage": "https://sunfishstanford.github.io/practice-japanese",
   "description": "Japanese learning quiz app for hiragana, katakana, and common phrases",
   "dependencies": {
     "react": "^19.2.3",
@@ -47,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
